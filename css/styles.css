@@ -1,0 +1,395 @@
+/*=============== VARIABLES CSS ===============*/
+:root {
+
+    /*========== Colors ==========*/
+    /*Color mode HSL(hue, saturation, lightness)*/
+    --color1: #1e2b46;
+    --color2: #4C6A92; 
+    --white-color: #efefef;
+    --black-color: #1E1E1E;
+    --grey-color: #B0B0B0;
+    --body-color: hsl(220, 100%, 100%);
+  
+    /*========== Font  ==========*/
+    --body-font: "Montserrat", sans-serif;
+  
+    /*========== Font weight ==========*/
+    --font-weight-p: 100;
+    --font-weight-h3: 200;
+    --font-weight-h2: 300;
+    --font-weight-h1: 500;
+
+    /*========== Font size ==========*/
+    --font-p: 1rem;
+    --font-h3: 2rem;
+    --font-h2: 3rem;
+    --font-h1: 4rem;
+
+    /*========== Border radius ==========*/
+    --border-radius: 3.75rem;
+  
+    /*========== z index ==========*/
+    --z-tooltip: 10;
+    --z-fixed: 100;
+  }
+
+  h1 {
+    margin-bottom: 0.8rem;
+    font-weight: var(--font-weight-h1);
+    letter-spacing: 0.1rem;
+  }
+
+  h2 {
+    margin-bottom: 3rem;
+    font-weight: var(--font-weight-h2);
+  }
+
+  p {
+    margin-bottom: 3rem;
+  }
+  
+  /*========== Responsive typography ==========*/
+  @media screen and (min-width: 1024px) {
+    :root {
+      --normal-font-size: 1rem;
+    }
+  }
+  
+  /*=============== BASE ===============*/
+  * {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+  }
+  body {
+    font-family: var(--body-font);
+    font-size: var(--normal-font-size);
+    background-color: var(--body-color);
+    }
+  
+    ul {
+    list-style: none;
+    }
+  
+    a {
+    text-decoration: none;
+    color: var(--white-color);
+    }
+  
+    .container {
+    max-width: 1120px;
+    margin-inline: 2rem;
+    }
+  
+    .animated-link {
+        position: relative;
+        display: inline-block;
+        text-decoration: none;
+        color: var(--color1);
+        transition: background-color 0.3s ease, color 0.3s ease;
+      }
+      
+      
+      .animated-link .link-icon {
+        transition: transform 0.3s ease;
+        margin-bottom: 0.1rem;
+      }
+      
+      
+      .animated-link:hover .link-icon {
+        transform: translateX(10px);
+      }
+  
+    /*=============== HEADER ===============*/
+    .header {
+       position: fixed;
+       top: 0;
+       left: 50%;
+       transform: translateX(-50%);
+       width: 100%; 
+       background-color: transparent; 
+       z-index: var(--z-fixed);
+       transition: 0.3s all ease-in-out;
+    }
+    
+    .header.scrolled {
+        backdrop-filter: blur(10px);
+    }
+    .header.scrolled.nav__logo {
+       color: var(--color1);
+    }
+  /*=============== NAV ===============*/
+  .nav {
+    height: 3.5rem;
+    }
+  
+    .nav__logo, 
+    .nav__burger, 
+    .nav__close {
+    color: var(--white-color);
+    }
+  
+    .nav__data {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    }
+  
+    .nav__logo {
+    display: inline-flex;
+    align-items: center;
+    column-gap: .25rem;
+    font-size: 1.6rem;
+    color: var(--white-color);
+    text-decoration: none;
+    font-weight: 700;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 0.2em;
+    transition: all ease-in-out 0.1s;
+    }
+  
+    .nav__toggle {
+    position: relative;
+    width: 32px;
+    height: 32px;
+    }
+  
+    .nav__burger, 
+    .nav__close {
+    position: absolute;
+    width: max-content;
+    height: max-content;
+    inset: 0;
+    margin: auto;
+    font-size: 1.25rem;
+    cursor: pointer;
+    transition: opacity .1s, transform .4s;
+    }
+  
+    .nav__close {
+    opacity: 0;
+    }
+  
+    @media screen and (max-width: 1118px) {
+    .nav__menu {
+       position: absolute;
+       left: 0;
+       top: 2.5rem;
+       width: 100%;
+       height: calc(100vh - 3.5rem);
+       overflow: auto;
+       pointer-events: none;
+       opacity: 0;
+       transition: 0.3s all ease-in-out;
+       background-color: var(--color1);
+    }
+    .nav__menu::-webkit-scrollbar {
+       width: 0;
+    }
+    .nav__list {
+       padding-top: 1rem;
+    }
+    }
+  
+    .nav__link {
+    color: var(--white-color);
+    font-weight: 600;
+    padding: 1.25rem 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color .3s;
+    }
+  
+    .nav__link.last__navbar__link {
+      justify-content: center;
+    }
+  
+    .show-menu {
+    opacity: 1;
+    top: 3.5rem;
+    pointer-events: initial;
+    }
+  
+    .show-icon .nav__burger {
+    opacity: 0;
+    transform: rotate(90deg);
+    }
+  
+    .show-icon .nav__close {
+    opacity: 1;
+    transform: rotate(90deg);
+    }
+
+    .nav__link__phone {
+        display: block;
+        margin-right: 0.5rem;
+    }
+
+    .nav__link__computer {
+        display: none;
+        margin-left: 0.5rem;
+    }
+
+    @media (min-width: 800px) {
+        .nav__link__phone {
+            display: none;
+        }
+
+        .nav__link__computer {
+            display: block;
+        }
+    }
+  
+  
+  /*=============== DROPDOWN ===============*/
+  .dropdown__item {
+    cursor: pointer;
+  }
+  
+  .dropdown__arrow {
+    font-size: 1.25rem;
+    font-weight: initial;
+    transition: transform .4s;
+  }
+  
+  .dropdown__link, 
+  .dropdown__sublink {
+    padding: 1.25rem 1.25rem 1.25rem 2.5rem;
+    color: var(--color1);
+    background-color: var(--white-color);
+    display: flex;
+    align-items: center;
+    column-gap: .5rem;
+    font-weight: 600;
+    transition: background-color .3s;
+  }
+  
+  .dropdown__link i, 
+  .dropdown__sublink i {
+    font-size: 1.25rem;
+    font-weight: initial;
+  }
+  
+  @media (hover: hover) and (pointer: fine) {
+      .dropdown__link:hover {
+        background-color: var(--color1);
+        color: var(--white-color);
+      }
+  }
+  
+  .dropdown__menu {
+    max-height: 0;
+    overflow: hidden;
+  }
+  
+  @media (hover: hover) and (pointer: fine) {
+      .dropdown__item:hover .dropdown__arrow {
+          transform: rotate(180deg);
+        }
+  }
+  
+  /*=============== BREAKPOINTS ===============*/
+  /* For small devices */
+  @media screen and (max-width: 340px) {
+    .container {
+      margin-inline: 1rem;
+    }
+  
+    .nav__link {
+      padding-inline: 1rem;
+    }
+  }
+  
+  /* For large devices */
+  @media screen and (min-width: 1118px) {
+    .container {
+      margin-inline: auto;
+    }
+  
+  
+    .nav {
+      height: calc(3.5rem + 2rem);
+      display: flex;
+      justify-content: space-between;
+    }
+    .nav__toggle {
+      display: none;
+    }
+    .nav__list {
+      height: 100%;
+      display: flex;
+      column-gap: 3rem;
+    }
+    .nav__link {
+      height: 100%;
+      padding: 0;
+      justify-content: initial;
+      column-gap: .25rem;
+    }
+  
+    @media (hover: hover) and (pointer: fine) {
+      .nav__link:hover {
+          background-color: transparent;
+        }
+    }
+  
+    .dropdown__item, 
+    .dropdown__subitem {
+      position: relative;
+    }
+  
+    .dropdown__menu {
+      max-height: initial;
+      overflow: initial;
+      position: absolute;
+      left: 0;
+      top: 6rem;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity .3s, top .3s;
+    }
+  
+    .dropdown__link, 
+    .dropdown__sublink {
+      padding-inline: 1rem 3.5rem;
+    }
+  
+    .dropdown__link {
+      padding-inline: 1rem;
+    }
+  
+    /* Show dropdown menu */
+  
+    @media (hover: hover) and (pointer: fine) {
+      .dropdown__item:hover .dropdown__menu {
+          opacity: 1;
+          top: 5.5rem;
+          pointer-events: initial;
+          transition: top .3s;
+        }
+    }
+  
+  }
+  .dropdown__menu {
+      max-height: 0;
+      opacity: 0;
+      pointer-events: none;
+      transition: max-height 0.4s ease-out, opacity 0.3s ease-out;
+  }
+  
+  .show-dropdown {
+      max-height: 1000px;
+      opacity: 1;
+      pointer-events: auto;
+      transition: max-height 0.4s ease-in, opacity 0.3s ease-in;
+  }
+  .show-dropdown.rotate-arrow {
+      transform: rotate(180deg);
+  }
+
+  #header.menu-open {
+    background-color: var(--color1); /* Replace with your desired menu open color */
+}
+
