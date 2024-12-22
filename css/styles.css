@@ -6,7 +6,7 @@
     --color1: #1e2b46;
     --color2: #4C6A92; 
     --white-color: #efefef;
-    --black-color: #1E1E1E;
+    --black-color: #040404;
     --grey-color: #B0B0B0;
     --body-color: hsl(220, 100%, 100%);
   
@@ -99,6 +99,29 @@
       .animated-link:hover .link-icon {
         transform: translateX(10px);
       }
+
+      .btn {
+        position: relative;
+        display: inline-block;
+        text-decoration: none;
+        color: var(--color1);
+        transition: all 0.3s ease-in-out;
+      }
+
+      .icon {
+        transition: all 0.3s ease-in-out;
+
+      }
+
+
+      .btn:hover .icon {
+        margin-left: 10px;
+      }
+
+      .btn-alternate-color {
+        color: var(--white-color);
+      }
+
   
     /*=============== HEADER ===============*/
     .header {
@@ -113,7 +136,7 @@
     }
     
     .header.scrolled {
-        backdrop-filter: blur(10px);
+        backdrop-filter: blur(30px);
     }
     .header.scrolled.nav__logo {
        color: var(--color1);
@@ -257,8 +280,8 @@
   .dropdown__link, 
   .dropdown__sublink {
     padding: 1.25rem 1.25rem 1.25rem 2.5rem;
-    color: var(--color1);
-    background-color: var(--white-color);
+    color: var(--white-color);
+    background-color: var(--black-color);
     display: flex;
     align-items: center;
     column-gap: .5rem;
