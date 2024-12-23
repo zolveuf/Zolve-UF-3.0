@@ -62,7 +62,7 @@
 .services {
     width: 100%;
     height: auto;
-    margin-top: 100vh;
+    margin-top: 110vh;
     background-color: var(--black-color);
     color: #fff;
     text-align: center;
@@ -77,7 +77,7 @@
 }
 
 .services-text h1 {
-    font-size: 2.3rem;
+    font-size: 2rem;
 }
 
 .services-text p {
@@ -99,7 +99,6 @@
 .card {
     background-color: var(--color1);
     padding: 5% 6%;
-    border: 0.2px solid rgba(114, 226, 174, 0.2);
     border-radius: 8px;
     display: flex;
     align-items: center;
@@ -145,8 +144,103 @@
     }
 }
 
+@media screen and (min-width: 700px) {
+    .services-text h1 {
+        font-size: 3rem;
+    }
+}
+
 @media screen and (max-width: 900px) {
     .cards {
         grid-template-columns: repeat(1,1fr);
     }
 }
+/*=============== KUNDER SECTION ===============*/
+
+.customers {
+    width: 100%;
+    height: auto;
+    margin-top: 10vh;
+    background-color: var(--black-color);
+    color: #fff;
+    text-align: center;
+}
+
+.customer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.customer-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.customer-card {
+    background-color: transparent;
+    padding: 5% 6%;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+}
+
+.customer-card h2 {
+    transition: ease-in-out all 0.3s; 
+}
+
+.customer-card.aurora:hover h2 {
+    color: var(--aurora-color);
+}
+
+.customer-card.flexiworker:hover h2 {
+    color: var(--flexiworker-color);
+}
+
+.customer-card.equalkidz:hover h2 {
+    color: var(--equalkidz-color);
+}
+
+.customer-card-icon {
+    color: var(--color2);
+    margin-bottom: 20px;
+    font-size: 4.8rem;
+}
+
+.customer-card img {
+    width: 85%;
+    margin-bottom: 1rem;
+}
+
+.aurora-color:hover {
+    color: var(--aurora-color);
+}
+.flexiworker-color:hover {
+    color: var(--flexiworker-color);
+}
+.equalkidz-color:hover {
+    color: var(--equalkidz-color);
+}
+
+.card-logo {
+    color: var(--color2);
+    margin-bottom: 20px;
+    font-size: 4.8rem;
+}
+
+@media screen and (max-width: 1200px) {
+    .customer-cards {
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .customer-cards {
+        grid-template-columns: repeat(1,1fr);
+    }
+}
+

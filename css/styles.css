@@ -9,6 +9,9 @@
     --black-color: #040404;
     --grey-color: #B0B0B0;
     --body-color: #040404;
+    --aurora-color: #e63417;
+    --equalkidz-color: #b9cfe4;
+    --flexiworker-color: #edce51;
   
     /*========== Font  ==========*/
     --body-font: "Montserrat", sans-serif;
@@ -40,7 +43,7 @@
   }
 
   h2 {
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
     font-weight: var(--font-weight-h2);
   }
 
@@ -87,17 +90,20 @@
         text-decoration: none;
         color: var(--color1);
         transition: background-color 0.3s ease, color 0.3s ease;
+        transition-delay: 0.2s;
       }
       
       
       .animated-link .link-icon {
         transition: transform 0.3s ease;
+        transition-delay: 0.1s;
         margin-bottom: 0.1rem;
       }
       
       
       .animated-link:hover .link-icon {
         transform: translateX(10px);
+    
       }
 
       .btn {
@@ -106,11 +112,12 @@
         text-decoration: none;
         color: var(--color1);
         transition: all 0.3s ease-in-out;
+        transition-delay: 0.1s;
       }
 
       .icon {
         transition: all 0.3s ease-in-out;
-
+        transition-delay: 0.1s;
       }
 
 
@@ -137,6 +144,7 @@
     
     .header.scrolled {
         backdrop-filter: blur(30px);
+        padding: 10px;
     }
     .header.scrolled.nav__logo {
        color: var(--color1);
@@ -414,5 +422,10 @@
 
   #header.menu-open {
     background-color: var(--color1); /* Replace with your desired menu open color */
+}
+
+.kurav {
+  height: 100vh;
+  width: 100%;
 }
 
