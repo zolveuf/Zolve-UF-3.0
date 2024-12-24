@@ -7,6 +7,7 @@
     --color2: #4C6A92; 
     --white-color: #efefef;
     --black-color: #040404;
+    --black-color-2: #0e0e0e;
     --grey-color: #B0B0B0;
     --body-color: #040404;
     --aurora-color: #e63417;
@@ -427,5 +428,6 @@
 .kurav {
   height: 100vh;
   width: 100%;
+  background-color: var(--black-color-2);
 }
 
