@@ -5,7 +5,7 @@
     position: absolute;
     top: 0;
     left: 0;
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0), var(--black-color)), 
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0), var(--black-color-2)), 
     url('/img/hero.jpg') no-repeat center center / cover;
 }
 
@@ -60,10 +60,8 @@
 /*=============== TJÄNSTER SECTION ===============*/
 
 .services {
-    width: 100%;
-    height: auto;
     margin-top: 100vh;
-    background-color: var(--black-color);
+    background-color: var(--black-color-2);
     color: #fff;
     text-align: center;
 }
@@ -78,6 +76,7 @@
 
 .services-text h1 {
     font-size: 2rem;
+    font-weight: 600;
 }
 
 .services-text p {
@@ -150,12 +149,7 @@
         font-size: 3rem;
     }
     .services {
-        width: 100%;
-        height: auto;
         margin-top: 110vh;
-        background-color: var(--black-color);
-        color: #fff;
-        text-align: center;
     }
     .card {
         text-align: center;
@@ -172,6 +166,7 @@
     width: 100%;
     height: auto;
     margin-top: 10vh;
+    padding-top: 10vh;
     padding-bottom: 10vh;
     background-color: var(--black-color);
     color: #fff;
@@ -188,6 +183,7 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 30px;
+    display: none;
 }
 
 .customer-card {
@@ -199,6 +195,12 @@
     flex-direction: column;
     position: relative;
     overflow: hidden;
+}
+
+.customer-cards-phone {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
 }
 
 .customer-card h2 {
@@ -244,14 +246,23 @@
     font-size: 4.8rem;
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (min-width: 1100px) {
     .customer-cards {
+        display: grid;
+    }
+    .customer-cards-phone {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .customer-cards, .customer-cards-phone {
         grid-template-columns: repeat(2,1fr);
     }
 }
 
 @media screen and (max-width: 900px) {
-    .customer-cards {
+    .customer-cards, .customer-cards-phone {
         grid-template-columns: repeat(1,1fr);
     }
 }
@@ -285,6 +296,7 @@
 
 .om-oss h1 {
     font-size: 3.4rem;
+    font-weight: 600;
 }
 
 .om-oss a {
@@ -310,7 +322,7 @@
 .explore {
     width: 100%;
     height: auto;
-    padding-bottom: 10vh;
+    padding: 10vh 0 10vh 0;
     background-color: var(--black-color);
     color: #fff;
     text-align: left;
