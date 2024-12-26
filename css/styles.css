@@ -145,7 +145,6 @@
     
     .header.scrolled {
         backdrop-filter: blur(30px);
-        padding: 10px;
     }
     .header.scrolled.nav__logo {
        color: var(--color1);
