@@ -11,7 +11,7 @@
     --grey-color: #B0B0B0;
     --body-color: #0e0e0e;
     --aurora-color: #e63417;
-    --equalkidz-color: #b9cfe4;
+    --equalkidz-color: #849cb4;
     --flexiworker-color: #edce51;
   
     /*========== Font  ==========*/
@@ -64,6 +64,9 @@
     box-sizing: border-box;
     padding: 0;
     margin: 0;
+  }
+  html {
+    scroll-behavior: smooth;
   }
   body {
     font-family: var(--body-font);
@@ -471,6 +474,15 @@ footer ul li {
   font-size: 1.3rem;
 }
 
+.footer-arrow i {
+  font-size: 4rem;
+  transition: color 0.3s ease;
+}
+
+.footer-arrow:hover i {
+  color: var(--color1); /* Add a hover effect */
+}
+
 .copyright {
   margin-top: 1rem;
   padding: 1rem;
@@ -489,5 +501,22 @@ footer ul li {
     max-width: 350px;
   }
 }
+
+@media (min-width: 1024px) {
+  .footer-section .allmanna-villkor {
+      display: block; /* Gör elementet synligt */
+  }
+}
+
+@media (max-width: 1023px) {
+  .footer-section .allmanna-villkor {
+      display: none; /* Döljer elementet på mindre skärmar */
+  }
+}
+
+p {
+  color: #9b9b9b;
+}
+
 
 
