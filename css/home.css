@@ -303,7 +303,8 @@
 }
 
 .om-oss p {
-    margin: 5vh 0 1vh 0;
+    margin-top: 5vh;
+    margin-bottom: 1vh;
 }
 
 .om-oss h1 {
@@ -318,16 +319,21 @@
 @media screen and (min-width: 768px) {
     .om-oss-container {
         flex-direction: row;
+        align-self: auto;
+        margin: 0 auto;
     }
     .om-oss-img img {
         width: 80%;
         height: 80%;
     }
-    .om-oss-text {
-        min-width: 450px;
-    }
     .om-oss {
         padding-top: 10vh;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .om-oss-container {
+        margin: 0 auto;
     }
 }
 /*=============== UTFORSKA SECTION ===============*/
