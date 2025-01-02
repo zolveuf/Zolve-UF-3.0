@@ -83,4 +83,21 @@ const handleMenuToggle = () => {
 window.addEventListener('scroll', handleScroll);
 toggle.addEventListener('click', handleMenuToggle);
 
+// Kundcase gridboxes
+
+
+function toggleExpand(element) {
+    const icon = element.querySelector('.icon i');
+
+    // Toggle the 'expanded' class to show or hide the audio
+    if (element.classList.contains('expanded')) {
+        element.classList.remove('expanded');
+        icon.classList.replace('ri-arrow-up-s-line', 'ri-arrow-down-s-line'); // Down arrow
+    } else {
+        element.classList.add('expanded');
+        icon.classList.replace('ri-arrow-down-s-line', 'ri-arrow-up-s-line'); // Up arrow
+    }
+}
+
+
 

@@ -1,0 +1,15 @@
+.explore-card h1{
+    color: #fff;
+    font-weight: 700;
+}
+
+
+
+.p-minus-margin {
+    margin-bottom: 0.3rem;
+    font-weight: 600;
+}
+
+.explore-card {
+    border: 1px solid #1b1b1b;
+}
