@@ -3,8 +3,6 @@
     font-weight: 700;
 }
 
-
-
 .p-minus-margin {
     margin-bottom: 0.3rem;
     font-weight: 600;
@@ -12,4 +10,22 @@
 
 .explore-card {
     border: 1px solid #1b1b1b;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.explore-card:hover {
+    transform: translateY(-10px);
+}
+
+.kundcase img {
+    width: 80%;
+}
+
+.kundcase {
+    margin-bottom: 2rem;
+}
+
+.kundcase h1 {
+    color: #fff;
+    font-size: 2rem;
 }
