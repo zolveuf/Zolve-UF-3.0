@@ -104,6 +104,7 @@
             <div class="hero-text">
                 <h1>Kontakta oss</h1>
             </div>
+            <div class="footer-line-2"></div>
         </div>
 
         </section>
@@ -111,7 +112,6 @@
     <!--=============== KUNDCASE SECTION ===============-->
     <section class="kundcase">
         <div class="container">
-            <div class="footer-line-2"></div>
             <div class="kontakta-oss">
                 <div class="kontakta-oss-text">
                     <h2>Välkommen att kontakta oss med dina frågor, tankar, idéer eller synpunkter. Ring eller maila oss direkt eller använd kontaktformuläret nedan.</h2>
@@ -146,13 +146,35 @@
             </div>
             <div class="footer-line-2"></div>
 
+            <form action="https://api.web3forms.com/submit" method="POST">
+                <!-- Web3Forms Access Key -->
+                <input type="hidden" name="access_key" value="be37b79d-ff9b-4f95-b048-82b7e9c9ae1e">
+                <input type="hidden" name="redirect" value="https://dinhemsida.com/tack">
+        
+                <h1 class="form-h1">Kontakta oss</h1>
+        
+                <!-- Namn -->
+                <label for="name">Namn</label>
+                <input type="text" id="name" name="name" required placeholder="Ditt namn">
+        
+                <!-- E-post -->
+                <label for="email">E-post</label>
+                <input type="email" id="email" name="email" required placeholder="Din e-postadress">
+        
+                <!-- Meddelande -->
+                <label for="message">Meddelande</label>
+                <textarea id="message" name="message" required placeholder="Skriv ditt meddelande här"></textarea>
+        
+                <!-- Skicka-knapp -->
+                <button type="submit">Skicka</button>
+            </form>
+
         </div>
     </section>
 
     <!--=============== FOOTER SECTION ===============-->
     <footer data-aos="fade-up" data-aos-once="true" data-aos-duration="1000">
         <div class="container">
-            <div class="footer-line"></div>
             <div class="footer-top">
                 <div class="footer-section">
                     <h1>Om oss</h1>

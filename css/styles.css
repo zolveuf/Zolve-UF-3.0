@@ -115,23 +115,37 @@
         display: inline-block;
         text-decoration: none;
         color: var(--color1);
-        transition: all 0.3s ease-in-out;
-        transition-delay: 0.1s;
+        transition: color 0.3s ease-in-out;
       }
-
+      
+      .btn::before {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0;
+        height: 1px; /* Adjust the thickness of the underline */
+        background-color: var(--white-color); /* Color of the underline */
+        transition: width 0.3s ease-in-out;
+      }
+      
+      .btn:hover::before {
+        width: 100%; /* Underline the entire button */
+      }
+      
       .icon {
         transition: all 0.3s ease-in-out;
         transition-delay: 0.1s;
       }
-
-
+      
       .btn:hover .icon {
         margin-left: 10px;
       }
-
+      
       .btn-alternate-color {
         color: var(--white-color);
       }
+      
 
   
     /*=============== HEADER ===============*/
@@ -533,7 +547,7 @@ p {
 .hero-2 {
   width: 100%;
   position: relative; 
-  background-image: linear-gradient(to bottom, rgba(2, 2, 2, 0.2), var(--black-color-2)), url(/img/hero.jpg);
+  background-image: linear-gradient(to bottom, rgba(2, 2, 2, 0.2), var(--black-color)), url(/img/hero.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;

@@ -22,10 +22,15 @@
 }
 
 .kundcase {
-    margin-bottom: 2rem;
+    padding-bottom: 2rem;
+    background-color: var(--black-color);
 }
 
 .kundcase h1 {
     color: #fff;
     font-size: 2rem;
+}
+
+.kundcase-contact {
+    text-align: center; 
 }

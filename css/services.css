@@ -1,0 +1,72 @@
+.services-hero-text {
+    margin-bottom: 0;
+}
+.services {
+    display: flex;
+    justify-content: start;
+    text-align: left;
+    background-color: var(--black-color);
+}
+
+.services-text p {
+    max-width: 1120px;
+}
+
+.services p {
+    line-height: 1.4rem;
+}
+
+
+.image-container {
+    width: 100%; /* Adjust to a specific width if needed, e.g., 600px */
+    max-width: 800px;
+    margin: 0 auto;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.image-container video {
+    border-radius: 10px;
+}
+
+.image-container img {
+    border-radius: 10px;
+}
+
+.image-container .top-image {
+    width: 100%;
+    display: block;
+}
+
+.image-container .bottom-images {
+    display: flex;
+    justify-content: space-between; /* Creates spacing between the two images */
+    gap: 0.5rem; /* Adds consistent spacing between images */
+    padding: 10px;
+}
+
+.image-container .bottom-images img {
+    width: 48%; /* Each image takes up almost half the container width */
+    border-radius: 5px;
+    object-fit: cover; /* Ensures consistent image scaling */
+    aspect-ratio: 16 / 9; /* Optional: Maintain a specific aspect ratio */
+}
+
+.services-text ul li {
+    display: flex;
+    gap: 10px;
+}
+
+.services-text ul li p{
+    margin-bottom: 1rem;
+}
+
+.services-contact {
+    text-align: center;
+}
+
+.services-contact h2 {
+    margin-bottom: 1rem;
+}
+
+
